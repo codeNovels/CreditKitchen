@@ -1,0 +1,187 @@
+<header id="home-header">
+  <!-- <header id="home-header" [ngClass]="{'header-fixed': isFixed}"> -->
+  <div class="" fxLayout="row wrap" fxLayoutAlign="start center">
+    <div class="header-mobile-top" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="start center">
+      <div class="home-logo mr-1">
+        <a href="/">
+          <img src="assets/images/icons/stove.svg" alt="creditkitchen logo" style="height: 32px;margin: auto;margin-right: 5px;margin-left: 15px;"> <h5 class="gradient-text" style="font-family: JasmineFont, Fallback, sans-serif; font-weight: bold">creditkitchen</h5>
+        </a>
+      </div>
+      <button mat-icon-button id="menu-toggle" (click)="toggleMenu()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <div fxFlex class="top-menu">
+      <!-- <a href="/backoffice/dashboard">
+    <button mat-button id="dashboard-topbtn" class="hometop-btn">Dashboard</button>
+  </a>
+  <a href="/backoffice/recommendations">
+    <button mat-button id="dashboard-topbtn" class="hometop-btn">My Recommendations</button>
+  </a> -->
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"  aria-expanded="false">
+          Credit Cards
+        </button>
+        <ul class="dropdown-menu">
+          <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="15px">
+            <div>
+              <li class="dropdown-header">Best of</li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/creditcards/best-credit-cards/">Best credit cards of 2019</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/creditcards/best-rewards-cards">Best rewards cards</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/creditcards/best-cash-back-cards">Best cash back cards</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/creditcards/best-travel-cards">Best travel cards</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/creditcards/best-business-cards">Best business cards</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/creditcards/best-student-cards">Best student cards</a>
+              </li>
+            </div>
+            <div>
+              <li class="dropdown-header">Read & learn</li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/creditcards/tips-for-establishing-a-good-credit-score-in-minimal-time">How to build good credit</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/creditcards/expert-tips-to-increase-your-credit-limit-without-harming-your-score">How to raise your credit limit</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/creditcards/tips-on-getting-approved-for-a-credit-card-at-first-go">How to get approved for a credit card</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/creditcards/a-guide-to-understanding-secured-credit-card">What is a secured credit card</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/creditcards/how-to-transfer-a-credit-card-balance-to-another-card">Initiate credit card balance transfer</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/creditcards/things-to-be-aware-of-before-getting-your-first-credit-card">Applying for your first credit card</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/creditcards/boosting-your-credit-score-by-becoming-an-authorized-user">Boost credit score by becoming an authorized user</a>
+              </li>
+
+            </div>
+          </div>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+          Banking
+        </button>
+        <ul class="dropdown-menu fade">
+          <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="15px">
+            <div>
+              <li class="dropdown-header">Read & learn</li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/banking/a-guide-to-opening-a-bank-account">How to open bank account</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/banking/getting-the-basics-of-checking-account">Checking account 101</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/banking/defining-savings-account">Savings account 101</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/banking/top-ways-to-avoid-overdraft-fees">Tips to avoid overdraft fees</a>
+              </li>
+            </div>
+          </div>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+          Investing
+        </button>
+        <ul class="dropdown-menu fade">
+          <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="15px">
+            <div>
+              <li class="dropdown-header">Read & learn</li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/investing/what-is-a-401k-plan-and-how-does-it-work">What is a 401k account</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/investing/how-to-set-up-your-first-401k-account">How setup your first 401k account</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/investing/a-guide-to-opening-an-ira-account">How to start an IRA account</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/investing/the-beginners-guide-to-understanding-the-ira-account">Beginners Guide to understasnding an IRA account</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/investing/investing-guide-to-the-stock-market-for-the-beginners">What are stocks & how to invest</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/investing/how-to-choose-a-financial-advisor">How to choose a financial advisor</a>
+              </li>
+            </div>
+          </div>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+          Mortgages
+        </button>
+        <ul class="dropdown-menu fade">
+          <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="15px">
+            <div>
+              <li class="dropdown-header">Read & learn</li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/mortgages/the-first-time-home-buyer-guide">First-time homebuyer guide</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blogs/mortgages/homebuying-what-to-expect">Homebuying what to expect</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="/blog/mortgages/top-reasons-to-refinance-your-mortgage">Why refinance your mortage</a>
+              </li>
+            </div>
+          </div>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
+          Loans
+        </button>
+        <ul class="dropdown-menu">
+          <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="15px">
+            <div>
+              <!-- <li class="dropdown-header">Search</li> -->
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="#">Personal Loans</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="#">Bad credit loans</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="#">Debt consolidation loans</a>
+              </li>
+              <li class="dropdown-item" (click)="toggleMenu()">
+                <a href="#">Student loans</a>
+              </li>
+            </div>
+          </div>
+        </ul>
+      </div>
+
+      <span fxFlex></span>
+      <!-- <button mat-button id="dashboard-topbtn" class="hometop-btn icon-button" (click)="buyEgret()">
+    Sign In
+  </button> -->
+    </div>
+
+  </div>
+</header>

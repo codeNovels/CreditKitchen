@@ -1,0 +1,110 @@
+.home-footer-top {
+  background-color: #f5f6f7;
+  color: rgb(0, 0, 0) !important;
+}
+.mat-list-item {
+  color: #000 !important;
+}
+.footer-box {
+  padding: 30px;
+}
+.footer-box:first-child {
+  padding-left: 0; 
+}
+.footer-box-title {
+  position: relative;
+  margin: 0 0 24px;
+  padding-bottom: 12px;
+}
+.footer-box-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 64px;
+  background-color: #ffc107;
+}
+.footer-box .mat-list {
+  padding: 0 !important;
+}
+.footer-box .mat-list-item-content {
+  padding-left: 0 !important;
+}
+.footer-box .mat-list-text {
+  color: #000;
+}
+
+.socials ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.socials ul li {
+  display: inline-block;
+}
+.social-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 8px;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+.social-icon.facebook {
+  background: url('../../../assets/images/social-facebook.png') no-repeat center center;
+}
+.social-icon.twitter {
+  background: url('../../../assets/images/social-twitter.png') no-repeat center center;
+}
+.social-icon.linkedin {
+  background: url('../../../assets/images/social-linkedin.png') no-repeat center center;
+}
+.social-icon.instagram {
+  background: url('../../../assets/images/social-instagram.png') no-repeat center center;
+}
+
+@media (max-width: 959px) {
+  .footer-box:first-child {
+    padding-left: 30px; 
+  }
+}
+
+.home-logo {
+  display: flex;
+  align-items: center;
+  a {
+    display: inherit;
+  }
+}
+
+.hyperlink {
+  color: #007bff
+}
+
+.hyperlink:hover {
+  text-decoration: underline !important;
+}
+
+.linkBoxes a{
+  cursor: pointer
+}
+.linkBoxes a:hover {
+  text-decoration: underline !important;
+}
+
+.linkBoxes {
+  line-height: 2.0rem;
+}
+
+.home-footer {
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}
+
+#footer {
+  display: none;
+}

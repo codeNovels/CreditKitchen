@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240px" height="240px" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>marketplace-mortgage</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="marketplace-mortgage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="circle" fill="#FEEFD0" cx="120" cy="120" r="120"></circle>
+        <g id="illustration" transform="translate(52.500000, 56.250000)" stroke="#F5A623" stroke-width="4.5">
+            <polygon id="Stroke-119-Copy" points="18.75 123.75 116.25 123.75 116.25 72.5791713 67.5 26.25 18.75 72.5791713"></polygon>
+            <path d="M56.25,123.75 L56.25,100.212764 C56.25,94.5720443 61.2867877,90 67.5,90" id="Fill-1"></path>
+            <path d="M67.5,123.75 L67.5,100.212764 C67.5,94.5720443 72.5367877,90 78.75,90" id="Fill-1-Copy" transform="translate(73.125000, 106.875000) scale(-1, 1) translate(-73.125000, -106.875000) "></path>
+            <polyline id="Stroke-119-Copy-2" stroke-linecap="round" stroke-linejoin="round" points="135 67.5 67.5 0 0 67.5"></polyline>
+            <polyline id="Stroke-123" points="37.5 30 37.5 7.5 18.75 7.5 18.75 48.75"></polyline>
+        </g>
+    </g>
+</svg>

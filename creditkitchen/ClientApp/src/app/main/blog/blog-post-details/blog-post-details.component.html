@@ -1,0 +1,74 @@
+<section class="home-section" style="margin-bottom: 20px; min-height: 50em">
+    <div class="container nw-blog" style="max-width: 1080px">
+      <header class="article-header nw-post-header">
+        <span class="hyperlink" data-toggle="modal" data-target="#modalDisclosure">Advertiser Disclosure</span>
+        <h1 class="nw-post-title article__headline" style="margin-top: 10px">
+          <span itemprop="headline">{{post.data?.title}}</span>
+        </h1>
+        <div class="nw-post-header-lower">
+          <div class="author__image">
+            <img alt="" src="{{post.data?.author.profile_image}}" class="img-circle  avatar-96 photo" height="96" width="96">
+          </div>
+          <div class="nw-post-header-meta-info">
+            <div class="nw-post-author author vcard reviewer" itemprop="author">
+              <span class="author url fn" rel="author">{{post.data?.author.first_name}}{{post.data?.author.last_name}}</span>
+            </div>
+            <span class="post-time">
+              <span>{{post.data?.published | date: 'MMMM dd, yyyy'}}</span>
+              <meta itemprop="datePublished" content="2019-04-05T06:02:31+00:00">
+              <meta itemprop="dateModified" content="2019-04-05T10:55:14-07:00">
+            </span>
+          </div>
+        </div>
+      </header>
+
+        <div fxLayout="column" class="blog-details" fxLayout="row wrap">
+            <div fxFlex.gt.sm="70" fxFlex.sm="100" fxFlex.xs="100">
+                <!-- <div fxLayout="row">
+                    <div *ngIf="post.meta?.previous_post">
+                        <a [routerLink]="post.meta.previous_post">
+                        </a>
+                    </div>
+                    <div *ngIf="post.meta?.next_post">
+                        <a [routerLink]="post.meta.next_post"></a>
+                    </div>
+                </div> -->
+                <div class="post-body" [innerHTML]="post.data?.body"></div>
+                <br />
+                <br />
+                <br />
+                <div id="disqus_thread"></div>
+            </div>
+
+
+            <!-- CREDIT CARDS -->
+            <div class="container nw-blog" fxFlex="30" fxHide.sm fxHide.xs>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="modalDisclosure" tabindex="-1" role="dialog" aria-labelledby="modalDisclosureLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalDisclosureLabel">Advertiser Disclosure</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                CreditKitchen is an independent, award-winning, advertising-supported website. Many credit card offers
+                that appear here are from companies from which CreditKitchen receives compensation. This compensation
+                may impact how and where products appear on this site (including, for example, the order in which they
+                appear). CreditKitchen does not include all card offers in the marketplace.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

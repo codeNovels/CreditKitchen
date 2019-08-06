@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240px" height="240px" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>marketplace-loans</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="marketplace-loans" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="circle" fill="#E9E2E9" cx="120" cy="120" r="120"></circle>
+        <g id="illustration" transform="translate(56.250000, 52.500000)" stroke="#9F6A93" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5">
+            <polyline id="Stroke-2" points="95.6756757 9.40677966 119.818433 12.6277649 103.207744 138.00261 55.1351351 131.694915"></polyline>
+            <polygon id="Stroke-4" points="31.1596417 137.182159 0.227664743 14.3717185 59.5065897 0.415686298 90.4390222 123.226568"></polygon>
+            <path d="M50.2689037,124.010598 L67.2057394,120.023286 C65.4975706,113.240364 69.7998785,106.403273 76.8152141,104.751802 L56.1937443,22.878028 C49.1779532,24.5294991 42.1061342,20.3699938 40.3979654,13.5875119 L23.4606742,17.5748238 C25.1692985,24.3573058 20.8669906,31.1948367 13.851655,32.8463078 L34.4726693,114.720082 C41.4884604,113.068611 48.5602794,117.228116 50.2689037,124.010598 Z" id="Stroke-6"></path>
+            <path d="M48.9419526,83.1269984 C40.7573186,85.0537148 32.5066353,80.2010319 30.5137716,72.288063 C28.5204525,64.3746536 33.5397358,56.3978278 41.7243699,54.4711115 C49.9094595,52.5443951 58.1601427,57.3970779 60.1530064,65.3100469 C62.1463255,73.2230159 57.1270422,81.2002821 48.9419526,83.1269984 Z" id="Stroke-8"></path>
+            <polyline id="Stroke-1" points="60.4054054 3.88003237 95.1340267 3.88003237 95.1340267 130.27923 60.4054054 130.27923"></polyline>
+        </g>
+    </g>
+</svg>

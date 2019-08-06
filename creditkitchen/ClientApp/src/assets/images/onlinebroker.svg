@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240px" height="240px" viewBox="0 0 240 240" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>marketplace-broker</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="marketplace-broker" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="circle" fill="#E3F9F1" cx="120" cy="120" r="120"></circle>
+        <g id="illustration" transform="translate(120.250000, 118.250000) scale(-1, 1) rotate(-180.000000) translate(-120.250000, -118.250000) translate(56.250000, 55.750000)">
+            <g id="arrow" transform="translate(0.000000, 72.000000)">
+                <path d="M0,0 L125.312989,48.34243" id="Stroke-124" stroke="#41AE7C" stroke-width="4.5"></path>
+                <polygon id="Fill-125" fill="#41AE7C" points="116.25 50.8745276 123.251466 47.9779192 120.233874 41.25 124.484736 42.8754724 127.5 49.6018997 120.502415 52.5"></polygon>
+            </g>
+            <polygon id="Stroke-119-Copy" stroke="#41AE7C" stroke-width="4.5" points="105 93.75 127.5 93.75 127.5 -1.70530257e-13 105 -1.70530257e-13"></polygon>
+            <polygon id="Stroke-121-Copy" stroke="#41AE7C" stroke-width="4.5" points="71 78.75 93.5 78.75 93.5 -1.70530257e-13 71 -1.70530257e-13"></polygon>
+            <polygon id="Stroke-122" stroke="#41AE7C" stroke-width="4.5" points="34 63.75 56.5 63.75 56.5 -1.70530257e-13 34 -1.70530257e-13"></polygon>
+            <polygon id="Stroke-123" stroke="#41AE7C" stroke-width="4.5" points="0 48.75 22.5 48.75 22.5 0 0 0"></polygon>
+        </g>
+    </g>
+</svg>

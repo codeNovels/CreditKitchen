@@ -1,0 +1,165 @@
+<section class="home-section" style="margin-bottom: 20px; min-height: 50em">
+  <div class="container nw-blog" style="max-width: 1080px">
+    <header class="article-header nw-post-header">
+      <span class="hyperlink" data-toggle="modal" data-target="#modalDisclosure">Advertiser Disclosure</span>
+      <h1 class="nw-post-title article__headline" style="margin-top: 10px">
+        <span itemprop="headline">{{post.data?.title}}</span>
+      </h1>
+      <div class="nw-post-header-lower">
+        <div class="author__image">
+          <img alt="" src="{{post.data?.author.profile_image}}" class="img-circle  avatar-96 photo" height="96" width="96">
+        </div>
+        <div class="nw-post-header-meta-info">
+          <div class="nw-post-author author vcard reviewer" itemprop="author">
+            <span class="author url fn" rel="author">{{post.data?.author.first_name}}{{post.data?.author.last_name}}</span>
+          </div>
+          <span class="post-time">
+            <span>{{post.data?.published | date: 'MMMM dd, yyyy'}}</span>
+            <meta itemprop="datePublished" content="2019-04-05T06:02:31+00:00">
+            <meta itemprop="dateModified" content="2019-04-05T10:55:14-07:00">
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <div fxLayout="column" class="blog-details" fxLayout="row wrap" fxLayoutGap="20px">
+      <div fxFlex.gt.sm="70" fxFlex.sm="100" fxFlex.xs="100">
+        <!-- <div fxLayout="row">
+        <div *ngIf="post.meta?.previous_post">
+            <a [routerLink]="post.meta.previous_post">
+            </a>
+        </div>
+        <div *ngIf="post.meta?.next_post">
+            <a [routerLink]="post.meta.next_post"></a>
+        </div>
+    </div> -->
+        <div class="post-body" [innerHTML]="post.data?.body"></div>
+        <br />
+        <br />
+        <br />
+        <div id="disqus_thread"></div>
+      </div>
+
+      <!-- BANKING -->
+      <aside id="nw-secondary" class="nw-sidebar" role="complementary">
+        <aside id="black-studio-tinymce-25" class="widget list-group-item widget_black_studio_tinymce">
+          <h5>Find the best credit card</h5>
+          <div class="textwidget">
+            <ul>
+              <li><a href="/creditcards/best-credit-cards">The best credit cards of {{year}}</a></li>
+            </ul>
+            <h6><strong>Earn rewards</strong></h6>
+            <ul>
+              <li>
+                <a href="/creditcards/best-cash-back-cards">
+                  Best
+                  cash back credit cards
+                </a>
+              </li>
+              <li>
+                <a href="/creditcards/best-rewards-cards">
+                  Best
+                  rewards credit cards
+                </a>
+              </li>
+            </ul>
+            <h6><strong>Best for students</strong></h6>
+            <ul>
+              <li>
+                <a href="/creditcards/best-student-cards">
+                  Best
+                  student cards
+                </a>
+              </li>
+            </ul>
+            <h6><strong>Best for business</strong></h6>
+            <ul>
+              <li>
+                <a href="/creditcards/best-business-cards">
+                  Best
+                  business credit cards
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </aside>
+        <aside id="black-studio-tinymce-26" class="widget list-group-item widget_black_studio_tinymce">
+          <h5>Learn more about credit cards</h5>
+          <div class="textwidget">
+            <h6><strong>Beginner</strong></h6>
+            <ul>
+              <li>
+                <a href="/blog/creditcards/things-to-be-aware-of-before-getting-your-first-credit-card">
+                  Before
+                  you get your first card
+                </a>
+              </li>
+              <li>
+                <a href="/blog/creditcards/a-guide-to-understanding-secured-credit-card">
+                  What
+                  is a secured credit card?
+                </a>
+              </li>
+            </ul>
+            <h6><strong>Intermediate</strong></h6>
+            <ul>
+              <li>
+                <a href="/blog/creditcards/tips-on-getting-approved-for-a-credit-card-at-first-go">
+                  How
+                  to apply for a credit card so you’ll get approved
+                </a>
+              </li>
+              <li>
+                <a href="/blog/creditcards/expert-tips-to-increase-your-credit-limit-without-harming-your-score">
+                  How
+                  can I raise my credit limit?
+                </a>
+              </li>
+            </ul>
+            <h6><strong>Advanced</strong></h6>
+            <ul>
+              <li>
+                <a href="/blog/creditcards/how-to-transfer-a-credit-card-balance-to-another-card">
+                  How
+                  to transfer your balance in 5 simple steps
+                </a>
+              </li>
+              <li>
+                <a href="/blog/creditcards/boosting-your-credit-score-by-becoming-an-authorized-user">
+                  Help
+                  someone build credit as an authorized user
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="modalDisclosure" tabindex="-1" role="dialog" aria-labelledby="modalDisclosureLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalDisclosureLabel">Advertiser Disclosure</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        CreditKitchen is an independent, award-winning, advertising-supported website. Many credit card offers
+        that appear here are from companies from which CreditKitchen receives compensation. This compensation
+        may impact how and where products appear on this site (including, for example, the order in which they
+        appear). CreditKitchen does not include all card offers in the marketplace.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

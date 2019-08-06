@@ -1,0 +1,162 @@
+#home-header {
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1px 0;
+  transition: padding 0.3s linear;
+  -webkit-transition: padding 0.3s linear;
+  z-index: 999;
+  border-bottom: 1px solid #d2d7dc;
+}
+#home-header > .container {
+  height: auto;
+  text-transform: uppercase;
+}
+.hometop-btn:hover ::ng-deep .mat-button-focus-overlay {
+  display: none;
+}
+
+.hometop-btn{
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .0625em;
+  font-family: Gotham,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+  font-weight: 400px;
+}
+.header-fixed {
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #fff;
+  padding: 0 !important;
+  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  animation: .6s slideDown forwards;
+}
+.header-fixed .container {
+  height: 60px !important;
+}
+.header-fixed .hometop-btn {
+  line-height: 60px !important;
+}
+.home-logo {
+  display: flex;
+  align-items: center;
+  a {
+    display: inherit;
+  }
+}
+#menu-toggle {
+  display: none;
+  position: absolute;
+  right: 5px;
+  /*top: 10px;*/
+}
+.icon-button {
+  .mat-icon {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  #home-header {
+    padding: 0;
+  }
+  #home-header > .container {
+      height: 60px;
+      padding: 0;
+  }
+  .menu-opened:host .header-mobile-top {
+    padding: 13px 0;
+  }
+  #menu-toggle {
+      display: block;
+  }
+  .menu-opened:host .container {
+      height: auto !important;
+  }
+  .home-logo {
+      margin-left: 15px; 
+  }
+  .top-menu {
+      display: none !important;
+  }
+  .menu-opened:host .top-menu {
+      display: block !important;
+      width: 100% !important;
+      flex: none !important;
+      background: #f3f3f3;
+  }
+  .menu-opened:host .top-menu button {
+      display: block;
+      width: 100%;
+      line-height: 56px !important;
+  }
+}
+.dropdown {
+  position: relative;
+  display: inline;
+}
+
+.dropdown .btn {
+    border-radius: 0px;
+    background: #fff;
+    margin: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: .0625em;
+    font-family: Gotham,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+    font-weight: 400px;
+}
+
+.dropdown button {
+    box-shadow: 0 0 0 0; 
+}
+
+.dropdown-item {
+  text-transform: initial;
+  letter-spacing: -.4px;
+  font-weight: 400px;
+  font-size: 14px;
+}
+
+.dropdown-header {
+  display: block;
+  padding: 0.5rem 1.5rem 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: black;
+  white-space: nowrap;
+  font-weight: 700;
+  text-transform: initial;
+  font-family: Gotham,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+}
+
+.dropdown-menu {
+    font-size: 12px;
+    border-radius: 0px 0px 0.25rem 0.25rem;
+    font-family: gotham,system-ui,-apple-system,blinkmacsystemfont,segoe ui,roboto,oxygen,ubuntu,cantarell,droid sans,helvetica neue,sans-serif;
+    margin-top: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gradient-text {
+  background: #1194f6;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: lowercase;
+  font-size: 30px;
+  margin: auto;
+}
+

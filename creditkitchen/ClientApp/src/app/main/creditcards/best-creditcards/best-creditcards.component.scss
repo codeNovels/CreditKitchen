@@ -1,0 +1,434 @@
+.home-intro-section {
+  // background: url('../../../../assets/images/home-bg.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 60px 0 0;
+  // color: #ffffff;
+  overflow: visible;
+  //background-color: #007aff;
+  background: linear-gradient(to right,#1194f6 0,#07d3d3 75%,#07d3d3 100%);
+  font-family: Gotham,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+  min-height: 23em;
+  max-height: 23em;
+}
+  .home-intro-title {
+    margin: 0 0 10px;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 54px;
+    color: white;
+    font-family: Gotham,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+  }
+  .home-intro-subtitle {
+    margin: 0 0px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+  }
+  .home-intro-text {
+    margin: 24px auto 0px;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+  }
+  .intro-cta {
+    max-width: 180px;
+    margin:  0 auto;
+  }
+  .intro-product {
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: -102px; // Adjust this for your product image
+  }
+  
+  @media (max-width: 767px) {
+    .home-intro-section {
+      padding: 100px 0 0;
+    }
+    .home-intro-title {
+      margin: 0 0 24px;
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 38px;
+      // text-shadow: 0 4px 4px rgba(0, 0, 0, 0.22);
+    }
+    .home-intro-subtitle {
+      margin: 0 0 22px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+    }
+    .intro-product {
+      bottom: -63px; // Adjust this for your product image
+      img {
+        width: 480px;
+      }
+    }
+  }
+  @media (max-width: 580px) {
+    .intro-product {
+      bottom: -39px; // Adjust this for your product image
+      img {
+        width: 280px;
+      }
+    }
+  }
+  
+
+  .offer-text {
+    font-family: Gotham,system-ui,sans-serif;
+    font-size: .8125rem;
+    line-height: 1.5384615384615385;
+    font-weight: 400;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #6c7f87;
+}
+
+.offer-icon {
+  height: 38px !important;
+  margin: 0px 0 1.5rem !important;
+}
+
+.offer-card {
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(108,127,135,.1), 0 1px 4px 0 rgba(108,127,135,.36) !important;
+}
+
+.categories {
+    //background: linear-gradient(0deg, white 75%, #007aff 0%);
+    -webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
+}
+.intro {
+    font-family: Gotham,system-ui,sans-serif;
+    font-size: .8125rem;
+    line-height: 1.5384615384615385;
+    font-weight: 400;
+    font-weight: 700;
+    letter-spacing: .0625em;
+    text-transform: uppercase;
+    color: #6c7f87;
+    padding: 0 0px 20px;
+}
+
+.intro-title {
+    margin: 0 0 24px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    // text-shadow: 0 4px 4px rgba(0, 0, 0, 0.22);
+    font-family: Chronicle Display,serif;
+  }
+  
+.dropdown {
+    position: relative;
+    display: inline;
+    
+}
+
+.dropdown button {
+    border: 1px solid #94a2a8;
+    border-radius: 4px;
+    background: #fff;
+    width: 33.333333%;
+    margin: 5px;
+}
+
+.dropdown button {
+    box-shadow: 0 0 0 0; 
+}
+
+.btnFindCardHeight {
+    height: 38px;
+    width: 20%;
+    border-radius: .125rem;
+    color: white !important;
+    text-transform: uppercase;
+    font-weight: 600px;
+    background-color: #008255 !important;
+}
+
+.intro {
+    font-family: Gotham,system-ui,sans-serif;
+    font-size: .8125rem;
+    line-height: 1.5384615384615385;
+    font-weight: 400;
+    font-weight: 700;
+    letter-spacing: .0625em;
+    text-transform: uppercase;
+    color: #6c7f87;
+    padding: 0 0px 20px;
+}
+
+.home-fancy-card {
+  box-shadow: 0 0 0 0 !important;
+  border-top: 0px;
+  border-radius: 0;
+}
+
+.home-fancy-card:hover {
+  background-color: blue;
+  color: white;
+}
+
+.smallboldfont {
+  font-family: Gotham,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.mat-grid-list-text{
+  text-align: center !important;
+}
+
+.grid-list {
+  border-left:1px solid darkgray;
+  border-top:1px solid darkgray;
+}
+
+.grid-tile {
+  border-right:1px solid darkgray;
+  border-bottom:1px solid darkgray;
+  background-color: white;
+}
+
+#categories-section .mat-grid-tile .mat-grid-tile-footer {
+  display: flex;
+  align-items: center;
+  color: #000;
+  background: transparent;
+  overflow: hidden;
+  position: absolute !important;
+  left: auto;
+  right: auto;
+}
+
+//   TELLME MORE
+
+#tellmemore-section .container {
+  padding: 10px 0 10px;
+}
+
+#tellmemore-section .mat-card-content {
+  padding: 5em 4em 5em 4em !important;
+  border-radius: 1px !important;
+  justify-content: space-between
+}
+
+#tellmemore-section .intro {
+  font-family: Gotham,system-ui,sans-serif;
+  font-size: .8125rem;
+  line-height: 1.5384615384615385;
+  font-weight: 400;
+  font-weight: 700;
+  letter-spacing: .0625em;
+  text-transform: uppercase;
+  padding: 0 0px 20px;
+}
+
+#tellmemore-section .text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: Gotham,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+  font-weight: 400;
+}
+
+#tellmemore-section .wrap div div {
+    padding:5px 0 0 !important;
+}
+
+#tellmemore-section .btncolor {
+    background: #57ce81 !important;
+    color: white;
+    border-radius: 1px;
+    font-size: 12px;
+    font-family: Gotham,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+    font-weight: bold !important;
+}
+
+
+// BOTTOM
+
+.intro {
+  font-family: Gotham,system-ui,sans-serif;
+  font-size: .8125rem;
+  line-height: 1.5384615384615385;
+  font-weight: 400;
+  font-weight: 700;
+  letter-spacing: .0625em;
+  text-transform: uppercase;
+  color: #6c7f87;
+  padding: 0 0px 20px;
+}
+
+.intro-title {
+  margin: 0 0 5px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.3333333333333333;
+  font-family: Gotham,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+}
+.sub-text {
+  font-family: Gotham,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #6c7f87;
+}
+
+.hyperlink {
+  color: #007bff !important;
+}
+
+.hyperlink:hover {
+  text-decoration: underline !important;
+  color: #007bff !important;
+  cursor: pointer !important;
+}
+
+.sub-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 15px;
+  text-align: left;
+  border: 1px solid darkgray;
+}
+
+.sub-container-text {
+  font-family: Gotham,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.3333333333333333;
+}
+
+.container {
+  padding: 0px 5px !important;
+}
+
+.text-inside-grid {
+  position: absolute;
+  left: 15px;
+  top: 6px;
+  font-family: Gotham,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+  font-size: 16px;
+}
+
+@media (max-width: 580px) {
+  .text-inside-grid {
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    font-size: 12px;
+    font-family: Gotham,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+  }
+
+  #credit-card-list-section .sub-container {
+    padding: 10px 10px !important;
+  }
+
+  .creditscore-box {
+    width: 5em !important;
+  }
+
+  #categories-section .smallboldfont{
+    font-size: 10px !important;
+    line-height: 10px !important;
+ }
+
+ #categories-section .mat-grid-tile .mat-grid-tile-footer { 
+    padding: 0px 0px;
+    text-align: center;
+  }
+}
+
+#credit-card-list-section .intro-text {
+  margin: 0 0 5px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  font-family: Gotham,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Droid Sans,Helvetica Neue,sans-serif;
+}
+
+#credit-card-list-section .sub-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 30px 15px;
+  text-align: left;
+  border: 0px;
+  box-shadow: 0 4px 8px 0 rgba(108,127,135,.1), 0 1px 4px 0 rgba(108,127,135,.36) !important;
+}
+
+#creditscore-range .mat-grid-tile .mat-grid-tile-footer, .mat-grid-tile .mat-grid-tile-header {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  color: #fff;
+  background: white;
+  // background: rgb(245, 246, 247);;
+  overflow: hidden;
+  padding: 0 16px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+#creditscore-range .mat-grid-tile {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  color: #fff;
+   background: rgb(245, 246, 247);;
+  overflow: hidden;
+  padding: 0 16px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.creditscore-outterbox {
+  margin-top: 5px; 
+  color: #3f51b5; 
+  font-weight: 400;
+  font-size: 12px
+}
+
+.creditscore-box {
+  background: #d8d8d8; 
+  height: 7px;
+  width: 7em;
+}
+
+.mat-dialog-container {
+  border-radius: 0px !important;
+}
+
+@media (max-width: 580px) {
+  .bonusLabel {
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    margin-bottom: 5px !important;
+  }
+
+  .bonusValue {
+    font-size: 10px !important
+  }
+  }
+
+  .bonusLabel {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px
+  }
+
+
+
+
+
+

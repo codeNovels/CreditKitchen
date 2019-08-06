@@ -1,0 +1,169 @@
+<section id="intro-section" class="home-intro-section text-center">
+    <div class="container" fxLayout="column" fxLayoutWrap="nowrap" style="color: white">
+        <h1 class="home-intro-title">Calculated choices by smart people.</h1>
+        <div class="home-intro-subtitle">
+          CreditKitchen provides useful tools, advice, and blogs to help make the best decisions.
+        </div>
+        <p class="home-intro-text">The best website to compare all your options</p>
+    </div>
+</section>
+
+<section id="categories-section" class="categories home-section" style="padding-top: 0px">
+    <div class="container" style="max-width: 1000px">
+      <div fxLayout="row" fxLayout.lt-sm="column"  fxLayoutGap="15px">
+        <div fxFlex="20" *ngFor="let card of cards">
+          <a [href]="card.url">
+          <mat-card class="p-0 m-0 mat-card">
+            <img mat-card-image class="offer-icon" style="margin: 24px 0 1rem !important;" src='assets/images/icons/{{card.icon}}'>
+            <mat-card-content>
+              <h5 class="offer-text"><strong>{{card.title}}</strong></h5>
+            </mat-card-content>
+          </mat-card>
+        </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="find-cards-section" class="find-cards-section home-section">
+      <div class="container">
+        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="15px">
+          <div fxFlex="30">
+            <img class="" src='assets/images/icons/find-credit-card.svg' style="width: 90%">
+          </div>
+          <div fxFlex="70">
+            <div class="section-header">
+              <h5 class="intro">
+                <strong>a great place to start</strong>
+              </h5>
+              <div class="intro-title">
+                Find your best credit cards
+              </div>
+              <p>Quickly see which cards offer the lowest rate, most cash back or sweetest perks.</p>
+              <br />
+              <br />
+              <!--<div class="dropdown">
+                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    My credit score is
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" (click)="toggleMenu()">Action</a>
+                    <a class="dropdown-item" (click)="toggleMenu()">Another action</a>
+                    <a class="dropdown-item" (click)="toggleMenu()">Something else here</a>
+                  </div>
+                </div>
+              <div class="dropdown">
+                  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    I care most about
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" (click)="toggleMenu()">Action</a>
+                    <a class="dropdown-item" (click)="toggleMenu()">Another action</a>
+                    <a class="dropdown-item" (click)="toggleMenu()">Something else here</a>
+                  </div>
+                </div>-->
+              <a mat-flat-button class="mat-accent btnFindCardHeight" href="/creditcards/best-credit-cards">View Best Options</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="information-section" class="information-section">
+        <div class="container">
+          <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="0px">
+            <div fxFlex="50">
+              <div class="left-section">
+                <h5 class="intro">
+                  <strong>You got this</strong>
+                </h5>
+                <div class="intro-title">
+                  Everything you need — totally free
+                </div>
+                <br />
+                <h5 class="title">
+                  <strong>Expert info</strong>
+                </h5>
+                <p class="text">
+                  Our objective and award-winning editorial team make even the most complicated money questions and topics simple
+                  to understand.
+                </p>
+                <h5 class="title">
+                  <strong>Helpful tools</strong>
+                </h5>
+                <p class="text">
+                  Side-by-side comparisons, smart calculators and straightforward simulators help you make sense of your options.
+                </p>
+                <h5 class="title">
+                  <strong>Tailored insights</strong>
+                </h5>
+                <p class="text">
+                  Tell us more about you and we'll recommend things like the best credit card for your spending habits, simple ways to up your
+                  credit score and more.
+                </p>
+              </div>
+            </div>
+            <div fxFlex="50" fxHide.xs style="text-align: center">
+              <img class="" src='assets/images/desktop-1.jpg' style="max-width: 575px; width: 575px">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="tellmemore-section" class="tellmemore">
+          <div class="container">
+            <div fxLayout="row wrap" layout-align="fxLayoutGap" fxLayout.lt-sm="column">
+              <div fxFlex="{{item.size}}" *ngFor="let item of items" style="padding: 15px 7px 0;">
+                <mat-card class="p-0 m-0 mat-card" [style.background]="item.background" style="max-height: 312px; border-radius: 2px">
+                  <mat-card-content [style.color]="item.color">
+                    <h5 class="intro"><strong [style.color]="item.color">{{item.title}}</strong></h5>
+                    <p class="text">{{item.text}}</p>
+                    <a mat-flat-button class="btncolor mat-bg-primary" href="{{item.url}}">{{item.button}}</a>
+                  </mat-card-content>        
+                </mat-card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="bottom-section" class="bottom-section home-section">
+            <div class="container">
+              <div class="sub-container">
+                <div class="">
+                  <div class="intro">
+                    We've done our research
+                  </div>
+                  <p class="sub-container-text">
+                    See our top picks for the best credit cards in every category.
+                  </p>
+                  <p fxLayout.lt-sm="column" fxLayoutGap="25px" style="display: inline-flex !important;">
+                    <a href="/creditcards/best-rewards-cards" class="hyperlink"><img src="assets/images/icons/medal.svg" class="tiny-icon"> Rewards</a>
+                    <a href="/creditcards/best-cash-back-cards" class="hyperlink"><img src="assets/images/icons/money.svg" class="tiny-icon"> Cash Back</a>
+                    <a href="/creditcards/best-travel-cards" class="hyperlink"><img src="assets/images/icons/travel.svg" class="tiny-icon"> Travel</a>
+                    <a href="/creditcards/best-business-cards" class="hyperlink"><img src="assets/images/icons/luggage.svg" class="tiny-icon"> Business</a>
+                    <a href="/creditcards/best-student-cards" class="hyperlink"><img src="assets/images/icons/student.svg" class="tiny-icon"> Student</a>
+                  </p>
+                </div>
+              </div>
+              <br />
+              <br />
+              <br />
+              <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="0px">
+                <div fxFlex="30" style="text-align: center">
+                  <img class="" src='assets/images/security-lock.svg' style="width: 50px; margin-right: -50%">
+                </div>
+                <div fxFlex="70">
+                  <div class="section-header">
+                    <div class="intro-title">
+                      Your security. Our priority.
+                    </div>
+                    <p class="sub-text">
+                      We always have your security in mind. Rest easy knowing all your data is protected with 128-bit encryption.
+                      <a href="/legal/privacy-policy" class="hyperlink">Learn more</a>.
+                    </p>
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>

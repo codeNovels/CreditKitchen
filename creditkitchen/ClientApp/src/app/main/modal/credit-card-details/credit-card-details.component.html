@@ -1,0 +1,248 @@
+ 
+ <section class='section'>
+    
+  <div class="sub-container" *ngIf="creditcard" style="margin-bottom: 40px">
+      <div style="display: block">
+          <small style="float:right; font-size: 12px;margin-top: 15px">
+              <span class="hyperlink" (click)="openRatingsDialog()">About Our Ratings</span> | 
+              <span class="hyperlink" (click)="openAdvertiserDisclosureDialog()">Advertiser Disclosure</span>
+            </small>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutWrap="nowrap" fxLayoutGap="30px">
+          <div fxFlex="20" fxLayoutAlign="center center">
+            <img mat-card-image class="credit-card-icon" src='assets/images/creditcards/{{creditcard.img}}'>
+          </div>
+          <div fxFlex="65">
+            <div class="intro-title">
+              {{creditcard.name}}
+            </div>
+            <br />
+            <div class="intro-text" id="creditscore-range">
+              RECOMMENDED CREDIT SCORE
+              <div class="creditscore-outterbox text-blue">
+                <div *ngFor="let creditscore of creditscores" fxLayout="row space-between center" fxLayoutWrap="nowrap">
+                  <div fxLayoutGap="3px" style="flex:content">
+                    <div>
+                      <span [style.color]="calcCreditScoreMinMax(creditcard, creditscore, 'min')? '': 'white'">{{creditscore.minScore}}</span>
+                      <span [style.color]="calcCreditScoreMinMax(creditcard, creditscore, 'max')? '': 'white'" style="float: right">{{creditscore.maxScore}}</span>
+                    </div>
+                    <div [style.background]="calcCreditScoreMinMax(creditcard, creditscore, '')? '#1194f6': ''" class="creditscore-box">&nbsp;</div>
+                    <div [style.color]="calcCreditScoreMinMax(creditcard, creditscore, '')? '': 'white'" style="text-align: center;">{{creditscore.text}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div fxFlex="20" fxLayout="column" fxLayoutAlign="space-between">
+            <a href="{{creditcard.applyUrl}}" target="_blank" mat-flat-button class="mat-primary btn-blue" style="border-radius: 2px; width: 100%">APPLY NOW</a>
+          </div>
+        </div>
+    <br />
+    <br />
+    <div>
+      <mat-grid-list cols="3" rowHeight="100px" gutterSize="0px" style="border-top: 1px solid darkgray; height: 99.9% !important" *ngIf="selectedCategory.value === 'rewards' || selectedCategory.value === 'cash back'">
+        <mat-grid-tile [colspan]="1" [rowspan]="1" class="" style="border-bottom: 1px solid darkgray;" *ngIf="creditcard.rewardsRateTop">
+          <div class="text-inside-grid">
+            <div class="bonusLabel">{{creditcard.rewardsRateLabel}}</div>
+            <div fxLayout="column" fxLayoutAlign="space-between">
+              <span class="bonusValue">{{creditcard.rewardsRateTop}}</span>
+              <span class="bonusValue" title="{{creditcard.rewardsRateBottom}}">{{creditcard.rewardsRateBottom}}</span>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1" style="border-left: 1px solid darkgray;border-bottom: 1px solid darkgray; height: 99.9% !important" *ngIf="creditcard.welcomeBonusTop">
+          <div class="text-inside-grid">
+            <div class="bonusLabel">{{creditcard.welcomeBonusLabel}}</div>
+            <div fxLayout="column" fxLayoutAlign="space-between">
+              <span class="bonusValue">{{creditcard.welcomeBonusTop}}</span>
+              <span class="bonusValue" title="{{creditcard.welcomeBonusBottom}}">{{creditcard.welcomeBonusBottom}}</span>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1" class="" style="border-left: 1px solid darkgray;border-bottom: 1px solid darkgray;height: 99.9% !important">
+          <div class="text-inside-grid">
+            <div class="bonusLabel">Annual Fee</div>
+            <div fxLayout="column" fxLayoutAlign="space-between">
+              <span class="bonusValue">{{creditcard.annualFeeTop}}</span>
+              <span class="bonusValue">{{creditcard.annualFeeBottom}}</span>
+            </div>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+      <mat-grid-list cols="4" rowHeight="100px" gutterSize="0px" style="border-top: 1px solid darkgray; height: 99.9% !important" *ngIf="selectedCategory.value !== 'rewards' && selectedCategory.value !== 'cash back'">
+        <mat-grid-tile [colspan]="1" [rowspan]="1" class="" style="border-bottom: 1px solid darkgray;" *ngIf="creditcard.bonusLabel1">
+          <div class="text-inside-grid">
+            <div class="bonusLabel">{{creditcard.bonusLabel1}}</div>
+            <div fxLayout="column" fxLayoutAlign="space-between">
+              <span class="bonusValue">{{creditcard.bonusTop1}}</span>
+              <span class="bonusValue" title="{{creditcard.bonusBottom1}}">{{creditcard.bonusBottom1}}</span>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1" style="border-left: 1px solid darkgray;border-bottom: 1px solid darkgray; height: 99.9% !important" *ngIf="creditcard.bonusLabel2">
+          <div class="text-inside-grid">
+            <div class="bonusLabel">{{creditcard.bonusLabel2}}</div>
+            <div fxLayout="column" fxLayoutAlign="space-between">
+              <span class="bonusValue">{{creditcard.bonusTop2}}</span>
+              <span class="bonusValue" title="{{creditcard.bonusBottom2}}">{{creditcard.bonusBottom2}}</span>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1" class="" style="border-left: 1px solid darkgray;border-bottom: 1px solid darkgray;height: 99.9% !important" *ngIf="creditcard.bonusLabel3">
+          <div class="text-inside-grid">
+            <div class="bonusLabel">{{creditcard.bonusLabel3}}</div>
+            <div fxLayout="column" fxLayoutAlign="space-between">
+              <span class="bonusValue">{{creditcard.bonusTop3}}</span>
+              <span class="bonusValue" title="{{creditcard.bonusBottom3}}">{{creditcard.bonusBottom3}}</span>
+            </div>
+          </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile [colspan]="1" [rowspan]="1" style="border-left: 1px solid darkgray;border-bottom: 1px solid darkgray; height: 99.9% !important" *ngIf="creditcard.bonusLabel2">
+          <div class="text-inside-grid">
+            <div class="bonusLabel">{{creditcard.bonusLabel4}}</div>
+            <div fxLayout="column" fxLayoutAlign="space-between">
+              <span class="bonusValue">{{creditcard.bonusTop4}}</span>
+              <span class="bonusValue" title="{{creditcard.bonusBottom4}}">{{creditcard.bonusBottom4}}</span>
+            </div>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+
+<br />
+    <div class="relative pb2 db">
+      <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutWrap="nowrap" fxLayoutGap="10px">
+        <div class="w-100 w-50-l dib v-top pr4-l mb2 mb0-l">
+          <h4 class="ttu ttc-ns f4 fw5 gallagher-gray b-l dib ckoffer-subhead-ul mt3 pt2 mb0">
+            <strong>Additional rates &amp; fees
+            </strong>
+          </h4>
+          <div class="pt2">
+            <div class="flex justify-between f5 lh-copy bb b--light-gray mv0 mv1 pv2 ckoffer-bn--last-of-type">
+              <span class="ttc morrissey-gray">
+                <span>
+                  <strong>Annual Fee</strong>
+                  <span style="float:right; color: #5a5c5e;">{{creditcard.annualFeeTop}}</span>
+                  <span style="float:right; color: #5a5c5e;">{{creditcard.annualFeeBottom}}</span>
+                </span>
+              </span>
+            </div>
+            <div class="flex justify-between f5 lh-copy bb b--light-gray mv0 mv1 pv2 ckoffer-bn--last-of-type">
+              <span class="ttc morrissey-gray">
+                <span>
+                  <strong>Intro Purchase APR</strong><span style="float:right; color: #5a5c5e;">{{creditcard.introPurchaseApr}}</span>
+                </span>
+              </span>
+            </div>
+            <div class="flex justify-between f5 lh-copy bb b--light-gray mv0 mv1 pv2 ckoffer-bn--last-of-type">
+              <span class="ttc morrissey-gray">
+                <span>
+                  <strong>Regular Purchase APR</strong><span style="float:right; color: #5a5c5e;">{{creditcard.regularPurchaseApr}}</span>
+                </span>
+              </span>
+            </div>
+            <div class="flex justify-between f5 lh-copy bb b--light-gray mv0 mv1 pv2 ckoffer-bn--last-of-type">
+                <span class="ttc morrissey-gray">
+                  <span>
+                    <strong>Intro Balance Transfer APR
+                      </strong><span style="float:right; color: #5a5c5e;">{{creditcard.introBalanceTransferApr}}</span>
+                  </span>
+                </span>
+              </div>
+            <div class="flex justify-between f5 lh-copy bb b--light-gray mv0 mv1 pv2 ckoffer-bn--last-of-type">
+              <span class="ttc morrissey-gray">
+                <span>
+                  <strong>Regular Balance Transfer APR</strong><span style="float:right; color: #5a5c5e;">{{creditcard.regularBalanceTransferApr}}</span>
+                </span>
+              </span>
+            </div>
+            <div class="flex justify-between f5 lh-copy bb b--light-gray mv0 mv1 pv2 ckoffer-bn--last-of-type">
+              <span class="ttc morrissey-gray">
+                <span>
+                  <strong>Cash Advance Rate
+                    </strong><span style="float:right; color: #5a5c5e;">{{creditcard.cashAdvanceRate}}</span>
+                </span>
+              </span>
+            </div>
+            <div class="flex justify-between f5 lh-copy bb b--light-gray mv0 mv1 pv2 ckoffer-bn--last-of-type">
+              <span class="ttc morrissey-gray">
+                <span>
+                  <strong>Cash Advance Fee
+                    </strong><span style="float:right; color: #5a5c5e;">{{creditcard.cashAdvanceFee}}</span>
+                </span>
+              </span>
+            </div>
+            <div class="flex justify-between f5 lh-copy bb b--light-gray mv0 mv1 pv2 ckoffer-bn--last-of-type">
+              <span class="ttc morrissey-gray">
+                <span>
+                  <strong>Late Fee
+                    </strong><span style="float:right; color: #5a5c5e;">{{creditcard.lateFee}}</span>
+                </span>
+              </span>
+            </div>
+            <div class="flex justify-between f5 lh-copy bb b--light-gray mv0 mv1 pv2 ckoffer-bn--last-of-type">
+              <span class="ttc morrissey-gray">
+                <span>
+                  <strong>Penalty APR
+                    </strong><span style="float:right; color: #5a5c5e;">{{creditcard.penaltyApr}}</span>
+                </span>
+              </span>
+            </div>
+            <div class="flex justify-between f5 lh-copy bb b--light-gray mv0 mv1 pv2 ckoffer-bn--last-of-type">
+              <span class="ttc morrissey-gray">
+                <span>
+                  <strong>Balance Transfer Fee
+                    </strong><span style="float:right; color: #5a5c5e;">{{creditcard.balanceTransferFee}}</span>
+                </span>
+              </span>
+            </div>
+            <div class="flex justify-between f5 lh-copy bb b--light-gray mv0 mv1 pv2 ckoffer-bn--last-of-type">
+              <span class="ttc morrissey-gray">
+                <span>
+                  <strong>Foreign Transaction Fee
+                    </strong><span style="float:right; color: #5a5c5e;">{{creditcard.foreignTransactionFee}}</span>
+                </span>
+              </span>
+            </div>
+            <div class="flex justify-between f5 lh-copy bb b--light-gray mv0 mv1 pv2 ckoffer-bn--last-of-type" style="border-bottom: 0px">
+              <span class="ttc morrissey-gray">
+                <span>
+                  <strong>Return Payment Fee
+                    </strong><span style="float:right; color: #5a5c5e;">{{creditcard.returnPaymentFee}}</span>
+                </span>
+              </span>
+            </div>
+          </div>
+          <br />
+          <br />
+          <div class="pt3 lh-copy">
+            <p class="f6 lh-copy mv0 pl2" style="text-indent: -0.5rem;">* See the online provider's credit card
+              application for details about terms and conditions. Reasonable efforts are made to maintain accurate
+              information. However, all credit card information is presented without warranty. When you click on the
+              "Apply Now" button, you can review the credit card terms and conditions on the provider's website.</p>
+          </div>
+        </div>
+        <div class="w-100 w-50-l dib v-top pt0 pl4-l mb3 mb0-l">
+          <h4 class="ttu ttc-ns f4 fw5 gallagher-gray b-l dib ckoffer-subhead-ul mt3 pt2 mb0">
+            <strong>Card Details</strong>
+          </h4>
+          <div [innerHTML]="creditcard.details" style="margin-left: -25px; color: #5a5c5e;"></div>
+          <br />
+          <span class="" *ngIf="creditcard.termsConditionUrl">
+            <span>† </span>
+            <a class="hyperlink" target="_blank" href="{{creditcard.termsConditionUrl}}">See offer and benefit terms</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
